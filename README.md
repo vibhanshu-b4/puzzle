@@ -1,2 +1,3 @@
-# puzzle
-My first JS Project.
+A Classic Slide Puzzle
+
+My First JS Project.

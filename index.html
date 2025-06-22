@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8boxes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+  </head>
+
+  <body>
+    <header>
+      <h3 class="logo">8BOXES</h3>
+      <div class="mode">
+        <span class="3 b8 active">8 Boxes</span>
+        <span class="4 b15">15 Boxes</span>
+        <span class="5 b24">24 Boxes</span>
+      </div>
+      <img class="reset" src="images/refresh.png" />
+      <div class="bgm-container">
+        <span class="bgm">Background Music:</span>
+        <div class="dropdown">
+          <div class="select">
+            <span class="selected">None</span>
+            <div class="caret"></div>
+          </div>
+          <ul class="menu">
+            <li class="active">None</li>
+            <li>Audio1</li>
+            <li>Audio2</li>
+            <li>Audio3</li>
+            <li>Audio4</li>
+            <li>Audio5</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <audio id="background-music" autoplay loop src=""></audio>
+    <div class="container">
+      <div class="hints-settings">
+        <div class="hints">
+          <h1>HOW TO PLAY</h1>
+          <p>
+            You can move the empty box around using the arrow keys on your
+            keyboard or use the swipe gestures on your phone. The timer will start once you make a move. <br /><br />
+            The game ends when your puzzle looks similar to goal image given
+            below. 
+
+          </p>
+
+        </div>
+        <img src="images/goal.png" alt="goal image" class="goal-image" />
+      </div>
+      <div class="grid-container">
+        <!-- Stats display above the grid -->
+        <div class="stats-container">
+          <div class="stat-item">
+            <span class="stat-label">MOVES:</span>
+            <span class="stat-value" id="move-count">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">TIME:</span>
+            <span class="stat-value" id="timer">00:00</span>
+          </div>
+        </div>
+      
+        <!-- Victory overlay -->
+        <div class="victory-overlay" id="victory-overlay">
+          <div class="victory-content">
+            <h2 class="victory-title">MISSION COMPLETED!</h2>
+            <div class="victory-stats">
+              <div class="victory-stat">
+                <span class="victory-label">Final Time:</span>
+                <span class="victory-value" id="final-time">00:00</span>
+              </div>
+              <div class="victory-stat">
+                <span class="victory-label">Total Moves:</span>
+                <span class="victory-value" id="final-moves">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      
+        <div class="grid"></div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
